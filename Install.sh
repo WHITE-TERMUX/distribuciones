@@ -60,31 +60,32 @@ co}
 function Distribution {
 	distrux
 echo -e -n "${verde}
-${blanco}¿CUÁL DISTRIBUCIÓN LINUX DESEA INSTALAR? ${rojo}
-
+┌══════════════════════════════════════════┐
+█ ${blanco}¿CUÁL DISTRIBUCIÓN LINUX DESEA INSTALAR? ${verde}█
+└══════════════════════════════════════════┘
 ┃    ┌════════════════════════════┐
-└═>>>☆ [${blanco}01${verde}] ┃ ${blanco}Alpine Linux 3.12.0 ${verde}
+└═>>>█ [${blanco}01${verde}] ┃ ${blanco}Alpine Linux 3.12.0 ${verde}█
 ┃    └════════════════════════════┘
 ┃    ┌═══════════════════┐
-└═>>>☆ [${blanco}02${verde}] ┃ ${blanco}Arch Linux ${verde}
+└═>>>█ [${blanco}02${verde}] ┃ ${blanco}Arch Linux ${verde}█
 ┃    └═══════════════════┘
 ┃    ┌═══════════════════════════┐
-└═>>>☆ [${blanco}03${verde}] ┃ ${blanco}Debian 10 (Buster) ${verde}
+└═>>>█ [${blanco}03${verde}] ┃ ${blanco}Debian 10 (Buster) ${verde}█
 ┃    └═══════════════════════════┘
 ┃    ┌═══════════════════════┐
-└═>>>☆ [${blanco}04${verde}] ┃ ${blanco}Kali Nethunter ${verde}
+└═>>>█ [${blanco}04${verde}] ┃ ${blanco}Kali Nethunter ${verde}█
 ┃    └═══════════════════════┘
 ┃    ┌═════════════════════┐
-└═>>>☆ [${blanco}05${verde}] ┃ ${blanco}Ubuntu 18.04 ${verde}
+└═>>>█ [${blanco}05${verde}] ┃ ${blanco}Ubuntu 18.04 ${verde}█
 ┃    └═════════════════════┘
 ┃    ┌═════════════════════┐
-└═>>>☆ [${blanco}06${verde}] ┃ ${blanco}Ubuntu 20.04 ${verde}
+└═>>>█ [${blanco}06${verde}] ┃ ${blanco}Ubuntu 20.04 ${verde}█
 ┃    └═════════════════════┘
 ┃    ┌════════════════┐
-└═>>>☆ [${blanco}00${verde}] ┃ ${rojo}NINGUNA ${verde}
+└═>>>█ [${blanco}00${verde}] ┃ ${rojo}NINGUNA ${verde}█
 ┃    └════════════════┘
 ┃
-└═>>>☆ "${blanco}
+└═>>> "${blanco}
 read -r Distro
 sleep 0.5
 
@@ -107,14 +108,11 @@ Error
 Distribution
 fi
 }
-#
-# Instalando Distribución Linux
-#
 function Install {
 	distrux
 echo -e "${verde}
 ┌══════════════════════════════════┐
-☆ ${blanco}INSTALANDO DISTRIBUCIÓN LINUX... ${verde}☆
+█ ${blanco}INSTALANDO DISTRIBUCIÓN LINUX... ${verde}█
 └══════════════════════════════════┘
 ┃
 └═>>>${blanco} ${Distro}
@@ -122,14 +120,14 @@ echo -e "${verde}
 proot-distro install ${Distro}
 echo -e "${verde}
 ┌══════════════════════════════┐
-☆ ${blanco}DISTRIBUCIÓN LINUX INSTALADA ${verde}☆
+█ ${blanco}DISTRIBUCIÓN LINUX INSTALADA ${verde}█
 └══════════════════════════════┘
 "${blanco}
 echo -e "alias ${Distro}='proot-distro login ${Distro}'" >> ${PREFIX}/etc/bash.bashrc
 echo -e "alias ${Distro}='proot-distro login ${Distro}'" >> ${PREFIX}/etc/fish/config.fish
 echo -e "${verde}
 ┌═════════════════════════════════════════┐
-☆ ${blanco}REINICIAR TERMUX Y EJECUTAR EL COMANDO: ${verde}☆
+█ ${blanco}REINICIAR TERMUX Y EJECUTAR EL COMANDO: ${verde}█
 └═════════════════════════════════════════┘
 ┃
 └═>>>${blanco} ${Distro}
